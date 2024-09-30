@@ -10,12 +10,12 @@ Business rules:
 Stack:
 - Svelte 5 (Runes)
 - SvelteKit
-- shadcn-svelte (importante ser components para svelte)
-- tailwind css (para o shadcn-svelte funcionar)
-- Triplitdev (banco de dados frontend)
-- Clerk Auth: configurar pra funcionar com ao Triplit.dev e SvelteKit.
+- shadcn-svelte (components in svelte; it's not shadcn-ui!)
+- tailwind css (integrated with shadcn-svelte)
+- Triplitdev (frontend database)
+- Clerk Auth: set to works with Triplit.dev and SvelteKit.
 
-Detalhes de config stack:
+Stack details:
 - Triplit should be set to local development.
 - "AUTH" should be set to true or false in .env file. The app checks Auth variable ONLY in Local Development, so if Auth=false, the app ignores auth and allow use everything without login or permission. If in production mode, everything needs auth.
 - the .env file must contain these variables:
