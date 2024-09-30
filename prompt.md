@@ -1,12 +1,12 @@
-Criei uma aplicação baseada nos critérios abaixo.
+Create an application based on the criteria below.
 
-Propósito da aplicação: [descreva aqui]
+Application purpose: [describe here]
 
-Regras de negócio:
-- regra 1
-- regra 2
-- regra 3
-
+Business rules:
+- rule 1
+- rule 2
+- rule 3
+- 
 Stack:
 - Svelte 5 (Runes)
 - SvelteKit
@@ -16,13 +16,13 @@ Stack:
 - Clerk Auth: configurar pra funcionar com ao Triplit.dev e SvelteKit.
 
 Detalhes de config stack:
-- o arquivo .env deve conter essas variaveis: TRIPLIT_EXTERNAL_JWT_SECRET
+- the .env file must contain these variables: TRIPLIT_EXTERNAL_JWT_SECRET
 - Triplit client needs to send the JWT token issued by Clerk with each request using TriplitClient.updateToken
 - Triplit client should has this config: autoConnect: browser
 - To allow Vite to bundle the files in the triplit directory created with triplit init, you can add the following configuration to vite.config.ts file in defineConfig: server: { fs: { allow: ['./triplit'] } }
-- Criar arquivo README.md (ou adicionar info se já existir): Clerk -> Email, Phone, Username: disable password and enable "Email verification code" 
--siga as instruções de exemplos dos códigos mais abaixo.
-
+- Create a README.md file with these info (or add these info if it already exists): Clerk -> Email, Phone, Username: disable password and enable "Email verification code"
+- Follow the instructions in the code examples below.
+  
 <CODE EXAMPLE Triplit schema.ts>
 import { Schema as S, type ClientSchema, type Entity, type Roles } from '@triplit/client';
 
