@@ -6,7 +6,7 @@ Business rules:
 - rule 1
 - rule 2
 - rule 3
-- 
+  
 Stack:
 - Svelte 5 (Runes)
 - SvelteKit
@@ -16,7 +16,19 @@ Stack:
 - Clerk Auth: configurar pra funcionar com ao Triplit.dev e SvelteKit.
 
 Detalhes de config stack:
-- the .env file must contain these variables: TRIPLIT_EXTERNAL_JWT_SECRET
+- Triplit should be set to local development.
+- "AUTH" should be set to true or false in .env file. The app checks Auth variable ONLY in Local Development, so if Auth=false, the app ignores auth and allow use everything without login or permission. If in production mode, everything needs auth.
+- the .env file must contain these variables:
+  - # Triplit CLI Variables
+  - TRIPLIT_DB_URL=http://localhost:6543
+  - TRIPLIT_ANON_TOKEN=<anon token>
+  - TRIPLIT_SERVICE_TOKEN=<service token>
+
+  - # App variables
+  - NEXT_PUBLIC_TRIPLIT_SERVER_URL=http://localhost:6543   
+  - NEXT_PUBLIC_TRIPLIT_TOKEN=<anon token>
+  - TRIPLIT_EXTERNAL_JWT_SECRET=<jwt secret>
+
 - Triplit client needs to send the JWT token issued by Clerk with each request using TriplitClient.updateToken
 - Triplit client should has this config: autoConnect: browser
 - To allow Vite to bundle the files in the triplit directory created with triplit init, you can add the following configuration to vite.config.ts file in defineConfig: server: { fs: { allow: ['./triplit'] } }
