@@ -211,4 +211,4 @@ export const triplit = new TriplitClient({
 	serverUrl: PUBLIC_TRIPLIT_SERVER_URL,
 	autoConnect: false,
 });
-</CODE EXAMPLE client.rs>
+</CODE EXAMPLE client.ts>
