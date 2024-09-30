@@ -1,3 +1,5 @@
+https://www.triplit.dev/docs/frameworks/svelte
+
 Svelte | Triplit Documentation
 
 [Triplit](/docs)
