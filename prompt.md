@@ -10,10 +10,10 @@ Business rules:
 Stack:
 - Svelte 5 (Runes)
 - SvelteKit
-- shadcn-svelte (components in svelte; it's not shadcn-ui!)
+- shadcn-svelte (components specific to svelte; it's not shadcn-ui!)
 - tailwind css (integrated with shadcn-svelte)
-- Triplitdev (frontend database)
-- Clerk Auth: set to works with Triplit.dev and SvelteKit.
+- Triplit.dev (frontend database)
+- Clerk-sveltekit Auth (: set to works with Triplit.dev and SvelteKit.
 
 Stack details:
 - Triplit should be set to local development.
