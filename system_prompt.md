@@ -264,7 +264,7 @@ Maintain these key documents in `claudeDev_docs/`:
    - Stack you should use:
       - Svelte 5 (Runes)
       - SvelteKit
-      - shadcn-svelte (components specific to svelte; it's not shadcn-ui!)
+      - shadcn-svelte@latest (components specific to svelte; do not use "shadcn-ui")
       - tailwind css (integrated with shadcn-svelte)
       - Triplit.dev (frontend database)
       - Clerk-sveltekit Auth (set to works with Triplit.dev and SvelteKit). Add it only when needs to create authentication.
