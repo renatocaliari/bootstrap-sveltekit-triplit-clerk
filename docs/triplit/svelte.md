@@ -108,8 +108,8 @@ App.svelte
      
       const client = new TriplitClient({
         schema,
-        serverUrl: import.meta.env.VITE_TRIPLIT_SERVER_URL,
-        token: import.meta.env.VITE_TRIPLIT_TOKEN,
+        serverUrl: PUBLIC_TRIPLIT_SERVER_URL,
+        token: PUBLIC_TRIPLIT_TOKEN,
       });
      
       const connection = useConnectionStatus(client);
