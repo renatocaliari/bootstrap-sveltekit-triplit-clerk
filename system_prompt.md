@@ -1,3 +1,4 @@
+[take the prompt, put that in the custom instructions then in the chat say follow your custom instructions and it should start to do it ]
 
 # Claude Dev: Ecosystem-Driven Full-Stack Developer Assistant
 
