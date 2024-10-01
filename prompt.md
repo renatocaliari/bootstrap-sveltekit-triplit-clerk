@@ -17,18 +17,7 @@ Stack:
 
 Stack details:
 - Triplit should be set to local development.
-- "AUTH" should be set to true or false in .env file. The app checks Auth variable ONLY in Local Development, so if Auth=false, the app ignores auth and allow use everything without login or permission. If in production mode, everything needs auth.
-- the .env file must contain these variables:
-  - # Triplit CLI Variables
-  - TRIPLIT_DB_URL=http://localhost:6543
-  - TRIPLIT_ANON_TOKEN=<anon token>
-  - TRIPLIT_SERVICE_TOKEN=<service token>
-
-  - # App variables
-  - NEXT_PUBLIC_TRIPLIT_SERVER_URL=http://localhost:6543   
-  - NEXT_PUBLIC_TRIPLIT_TOKEN=<anon token>
-  - TRIPLIT_EXTERNAL_JWT_SECRET=<jwt secret>
-
+- "AUTH" should be set to false in .env file. The app checks Auth variable ONLY in Local Development, so if Auth=false, the app ignores auth and allow use everything without login or permission. If in production mode, everything needs auth.
 - Triplit client needs to send the JWT token issued by Clerk with each request using TriplitClient.updateToken
 - Triplit client should has this config: autoConnect: browser
 - To allow Vite to bundle the files in the triplit directory created with triplit init, you can add the following configuration to vite.config.ts file in defineConfig: server: { fs: { allow: ['./triplit'] } }
@@ -164,9 +153,7 @@ export const schema = {
 
 // Use the `Entity` type to extract clean types for your collections
 export type Todo = Entity<typeof schema, 'todos'>;
-
-
-</CODE EXAMPLE Triplit>
+</CODE EXAMPLE Triplit schema.ts>
 
 <CODE EXAMPLE +layout.server.ts>
 // src/+layout.server.ts
@@ -180,13 +167,13 @@ export const load = async ({ locals }) => {
 		token,
 	};
 };
-</CODE EXAMPLE layout>
+</CODE EXAMPLE  +layout.server.ts>
 
 <CODE EXAMPLE hooks.server.ts>
 import { withClerkHandler } from 'svelte-clerk/server';
 
 export const handle = withClerkHandler();
-</CODE EXAMPLE hooks>
+</CODE EXAMPLE hooks.server.ts>
 
 <CODE EXAMPLE lib/components/client.ts>
 import { TriplitClient } from '@triplit/client';
@@ -211,4 +198,4 @@ export const triplit = new TriplitClient({
 	serverUrl: PUBLIC_TRIPLIT_SERVER_URL,
 	autoConnect: false,
 });
-</CODE EXAMPLE client.ts>
+</CODE EXAMPLE lib/components/client.ts>
