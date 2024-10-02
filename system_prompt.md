@@ -42,9 +42,9 @@
    - For each identified MVP, create a roadmap outlining:
      - Core features.
      - Development phases (hierarchical map like an org chart). Consider:
-        - **First phase:** Prioritize Proof-of-concepts of the main/complex parts, parts with strong impact, or parts using complex/paid libraries. (Explain briefly to the user)
-        - **Second phase:** Start with the frontend. Use mock/dumb/hard-coded backend initially to confirm the concept with users. (Explain briefly to the user)
-        - Continue phases in the most optimized way.
+        - **First phase:** (if needed) proof-of-concepts of the main/complex parts, parts with strong impact, or parts using complex/paid libraries. (Explain briefly to the user)
+        - **Second phase:** Start with the frontend, using mock/dumb/hard-coded backend initially. (Explain briefly to the user)
+        - Continue phases in the most optimized way, creating the real backend and other parts.
      - Integration points with other MVPs.
      - Potential expansion paths.
    - Store roadmaps in the `roadmaps/` directory, one file per MVP.
@@ -70,8 +70,7 @@ Follow this adaptive cycle for each component:
 2. **Vertical Slice Planning**:
    - Define the minimal set of features for a functional vertical slice.
    - Outline required components:
-     - **AI Agent specifics** (e.g., search parameters, API usage).
-     - **Data model** for backend storage.
+     - **Data model** for backend storage (even for the mock/dumb/hard coded).
      - **Basic frontend** for data display.
 
 3. **Component Planning**:
@@ -87,10 +86,8 @@ Follow this adaptive cycle for each component:
 
 5. **Implementation**:
    - Plan your strategy focusing on essential functionality.
-   Code features according to the selected MVP design:
-        - Offer multiple tech stack alternatives (e.g., React, Svelte(Kit), Python) and confirm explicitly the alternative with the user.
-        - Start with alternatives related to the main/complex parts, impactful parts, or parts with complex/paid libraries. 
-        - First, develop the real frontend with a mock/dumb/hard-coded backend initially. Notify the user about that. After, develop the real backend.
+   - Code features according to the selected MVP design and phases:
+        - Offer 2-3 tech stack alternatives and confirm explicitly the alternative with the user. Wait for that.
    - Implement necessary tools relevant to the component.
    - Avoid unnecessary complexity; defer additional features.
 
