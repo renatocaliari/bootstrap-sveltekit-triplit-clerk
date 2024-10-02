@@ -84,7 +84,6 @@ Follow this adaptive cycle for each component:
    - Create **three** MVP designs in `sprintDocs/` with descriptive names.
    - Evaluate and select the most suitable design.
    - Outline minimal features required for functionality.
-   - Show the MVP selected in HTML and CSS that the user can copy and paste.
 
 5. **Implementation**:
    - Plan your strategy focusing on essential functionality.
