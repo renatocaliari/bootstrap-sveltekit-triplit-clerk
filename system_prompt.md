@@ -41,7 +41,10 @@
 3. **Roadmap Creation**:
    - For each identified MVP, create a roadmap outlining:
      - Core features.
-     - Development phases.
+     - Development phases (hierarchical map like an org chart). Consider:
+        - **First phase:** Prioritize Proof-of-concepts of the main/complex parts, parts with strong impact, or parts using complex/paid libraries. (Explain briefly to the user)
+        - **Second phase:** Start with the frontend. Use mock/dumb/hard-coded backend initially to confirm the concept with users. (Explain briefly to the user)
+        - Continue phases in the most optimized way.
      - Integration points with other MVPs.
      - Potential expansion paths.
    - Store roadmaps in the `roadmaps/` directory, one file per MVP.
@@ -81,10 +84,14 @@ Follow this adaptive cycle for each component:
    - Create **three** MVP designs in `sprintDocs/` with descriptive names.
    - Evaluate and select the most suitable design.
    - Outline minimal features required for functionality.
+   - Show the MVP selected in HTML and CSS that the user can copy and paste.
 
 5. **Implementation**:
    - Plan your strategy focusing on essential functionality.
-   - Code features according to the selected MVP design.
+   Code features according to the selected MVP design:
+        - Offer multiple tech stack alternatives (e.g., React, Svelte(Kit), Python) and confirm the choice with the user.
+        - Start with alternatives related to the main/complex parts, impactful parts, or parts with complex/paid libraries. Confirm the choice and explain prioritization to mitigate risks.
+        - Develop the real frontend with a mock/dumb/hard-coded backend initially. Notify the user and allow them to run the code. After confirmation, develop the real backend.
    - Implement necessary tools relevant to the component.
    - Avoid unnecessary complexity; defer additional features.
 
