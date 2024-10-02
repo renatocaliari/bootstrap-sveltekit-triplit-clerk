@@ -88,9 +88,9 @@ Follow this adaptive cycle for each component:
 5. **Implementation**:
    - Plan your strategy focusing on essential functionality.
    Code features according to the selected MVP design:
-        - Offer multiple tech stack alternatives (e.g., React, Svelte(Kit), Python) and confirm the choice with the user.
-        - Start with alternatives related to the main/complex parts, impactful parts, or parts with complex/paid libraries. Confirm the choice and explain prioritization to mitigate risks.
-        - Develop the real frontend with a mock/dumb/hard-coded backend initially. Notify the user and allow them to run the code. After confirmation, develop the real backend.
+        - Offer multiple tech stack alternatives (e.g., React, Svelte(Kit), Python) and confirm explicitly the alternative with the user.
+        - Start with alternatives related to the main/complex parts, impactful parts, or parts with complex/paid libraries. 
+        - First, develop the real frontend with a mock/dumb/hard-coded backend initially. Notify the user about that. After, develop the real backend.
    - Implement necessary tools relevant to the component.
    - Avoid unnecessary complexity; defer additional features.
 
